@@ -1,0 +1,458 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <windows.h>
+using namespace std;
+
+
+string DaoChuoi(string s);
+int check_chuoi_nhi_phan(string s);
+int check_chuoi_thap_phan(string s);
+int check_chuoi_bat_phan(string s);
+int check_chuoi_thap_luc_phan(string s);
+string DecToBinary(string n);
+string DecToOct(string n);
+string DecToHex(string n);
+string BinaryToDec(string n);
+string OctToDec(string n);
+string HexToDec(string n);
+string BinaryToHex(string n);
+string BinaryToOct(string n);
+string OctToBinary(string n);
+string HexToBinary(string n);
+void CachDong(int n);
+
+int main()
+{
+    while (true)
+    {
+        system("cls");
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+        cout << "===============================================================================\n\n";
+        cout << "   CHAO MUNG TAT CA CAC BAN DA DEN VOI UNG DUNG CHUYEN DOI CO SO CUA NHOM 2\n\n";
+        cout << "           Nhom Minh Gom 2 Thanh Vien Lam Nhat Minh Va Ngo Gia Bao\n\n";
+        cout << "                   Day Cung La Do An Dau Tien Ma Tui Minh Lam\n\n";
+        cout << "               Nen Co Gi Sai Sot Mong Cac Ban Bo Qua Va Gop Y Kien\n\n";
+        cout << "      CHUC CAC BAN CO MOT KHOANG THOI GIAN VUI VE KHI SU DUNG UNG DUNG \n\n ";
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+        cout << "===================================== MENU ===================================\n\n";
+        cout << "                        v  v  v  v  v       v  v  v  v  v                    \n";
+        cout << "                    v                 v    v                 v                \n";
+        cout << "                   v                    v                    v               \n\n";
+        cout << "                  v     1. He Thap Phan Sang He Nhi Phan      v              \n\n";
+        cout << "                 v      2. He Thap Phan Sang He Bat Phan       v             \n\n";
+        cout << "                v     3. He Thap Phan Sang He Thap Luc Phan     v            \n\n";
+        cout << "                v       4. He Nhi Phan Sang He Thap Phan        v            \n\n";
+        cout << "                v       5. He Bat Phan Sang He Thap Phan        v            \n\n";
+        cout << "                v     6. He Thap Luc Phan Sang He Thap Phan     v            \n\n";
+        cout << "                v     7. He Nhi Phan Sang He Thap Luc Phan      v            \n\n";
+        cout << "                v       8. He Nhi Phan Sang He Bat Phan         v            \n\n";
+        cout << "                 v      9. He Bat Phan Sang He Nhi Phan        v             \n\n";
+        cout << "                  v   10. He Thap Luc Phan Sang He Nhi Phan  v               \n\n";
+        cout << "                    v               11. Thoat              v                 \n\n";
+        cout << "                       v                                v                    \n\n";
+        cout << "                           v                       v                         \n\n";
+        cout << "                                 v            v                              \n\n";
+        cout << "===============================================================================\n\n";
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY);
+        CachDong(23); cout << "Nhap lua chon: ";
+        string choice;
+        MinhDepTrai: cin >> choice;
+            if (choice == "1")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so thap phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_thap_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so thap phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So nhi phan: " << DecToBinary(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if (choice == "2")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so thap phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_thap_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so thap phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So he bat phan: " << DecToOct(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if (choice == "3")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so thap phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_thap_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so thap phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So thap luc phan: " << DecToHex(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "4")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so nhi phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_nhi_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so nhi phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So he thap phan: " << BinaryToDec(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "5")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so bat phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_bat_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so bat phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So he thap phan: " << OctToDec(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "6")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so thap luc phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_thap_luc_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so thap luc phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "He thap phan: " << HexToDec(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "7")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so nhi phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_nhi_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so nhi phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So he thap luc phan: " << DecToHex(BinaryToDec(n)) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "8")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so nhi phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_nhi_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so nhi phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So he bat phan: " << DecToOct(BinaryToDec(n)) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "9")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so bat phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_bat_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so bat phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "So nhi phan: " << DecToBinary(OctToDec(n)) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "10")
+            {
+                string n;
+                int check;
+                cout << endl; CachDong(21); cout << "Nhap so thap luc phan: ";
+                do
+                {
+                    check = 1;
+                    cin >> n;
+                    if(check_chuoi_thap_luc_phan(n) == 0)
+                    {
+                        cout << endl; CachDong(19); cout << "Nhap sai dinh dang. Moi nhap lai so thap luc phan: ";
+                        check = 0;
+                    }
+                }while(check == 0);
+                cout << endl; CachDong(21); cout << "Nhi phan: " << HexToBinary(n) << endl << endl;
+                CachDong(21); system("pause");
+            }
+            else if(choice == "11")
+            {
+                break;
+            }
+            else
+            {
+                do{
+                    cout << endl; CachDong(9); cout << "So lua chon phai tu 1 den 11. Moi ban nhap lai so lua chon: ";
+                    goto MinhDepTrai;
+                }while(choice <= "0" || choice >= "12");
+                CachDong(21); system("pause");
+            }
+    }
+    return 0;
+}
+
+string DaoChuoi(string s)
+{
+    string s1 = "";
+    for (int i = s.length(); i >=0; i--)
+    {
+       s1 += s[i];
+    }
+    return s1;
+}
+
+int check_chuoi_nhi_phan(string s)
+{
+    for(int i = 0; i < s.length(); i++)
+    {
+        if(s[i] < '0' || s[i] > '1')
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int check_chuoi_thap_phan(string s)
+{
+    for(int i = 0; i < s.length(); i++)
+    {
+        if(s[i] < '0' || s[i] > '9')
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int check_chuoi_bat_phan(string s)
+{
+    for(int i = 0; i < s.length(); i++)
+    {
+        if(s[i] < '0' || s[i] > '7')
+        {
+            return 0;
+
+        }
+    }
+    return 1;
+}
+
+int check_chuoi_thap_luc_phan(string s)
+{
+    for(int i = 0; i < s.length(); i++)
+    {
+        if((s[i] < '0' || s[i] > '9') && (s[i] < 'A' || s[i] > 'F'))
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+// doi thap phan sang nhi phan
+string DecToBinary(string n)
+{
+    if(n == "0")
+    {
+        return "0";
+    }
+    int number = stoi(n);
+    string binary = "";
+    while (number > 0)
+    {
+        binary = to_string(number % 2) + binary;
+        number /= 2;
+    }
+    return binary;
+}
+
+// doi thap phan sang he bat phan
+string DecToOct(string n)
+{
+    if(n == "0")
+    {
+        return "0";
+    }
+    int number = stoi(n);
+    string octal = "";
+    while (number > 0)
+    {
+        octal = to_string(number % 8) + octal;
+        number /= 8;
+    }
+    return octal;
+}
+
+string DecToHex(string n)
+{
+    if(n == "0")
+    {
+        return "0";
+    }
+    int number = stoi(n);
+    string hex = "";
+    while (number > 0)
+    {
+        if (number % 16 >= 10)
+        {
+            switch (number % 16)
+            {
+            case 10:
+                hex += "A";
+                break;
+            case 11:
+                hex += "B";
+                break;
+            case 12:
+                hex += "C";
+                break;
+            case 13:
+                hex += "D";
+                break;
+            case 14:
+                hex += "E";
+                break;
+            case 15:
+                hex += "F";
+                break;
+            }
+        }
+        else
+        {
+            hex += to_string(number % 16);
+        }
+        number /= 16;
+    }
+    return DaoChuoi(hex);
+}
+
+string BinaryToDec(string n)
+{
+    int number = 0;
+    for (int i = 0; i < n.length(); i++)
+    {
+        number += pow(2, n.length() - i - 1) * (n[i] - '0');
+    }
+    return to_string(number);
+}
+
+string OctToDec(string n)
+{
+    int number = 0;
+    for (int i = 0; i < n.length(); i++)
+    {
+        number += pow(8, n.length() - i - 1) * (n[i] - '0');
+
+    }
+    return to_string(number);
+}
+
+string HexToDec(string n)
+{
+    int len = n.length();
+    int base = 1;
+    int temp = 0;
+    for (int i = len - 1; i >= 0; i--) {
+        if (n[i] >= '0' && n[i] <= '9') {
+            temp += (n[i] - 48)*base;
+            base = base * 16;
+        }
+        else if (n[i] >= 'A' && n[i] <= 'F') {
+            temp += (n[i] - 55)*base;
+            base = base*16;
+        }
+   }
+   return to_string(temp);
+}
+
+string BinaryToHex(string n)
+{
+    return DecToHex(BinaryToDec(n));
+}
+
+string BinaryToOct(string n)
+{
+    return DecToOct(BinaryToDec(n));
+}
+
+string OctToBinary(string n)
+{
+    return DecToBinary(OctToDec(n));
+}
+
+string HexToBinary(string n)
+{
+    return DecToBinary(HexToDec(n));
+}
+
+void CachDong(int n)
+{
+    for(int i = 1; i <= n; i++)
+    {
+        cout << " ";
+    }
+}
