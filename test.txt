@@ -1,5 +1,6 @@
 thay đổi test lần 1
 thay đổi test lần 2
+<<<<<<< HEAD
 thay đổi test lần 3
 thay đổi test lần 4
 thay đổi test lần 5
@@ -7,3 +8,5 @@ thay đổi test lần 6
 thay đổi test lần 7
 thay đổi test lần 8
 thay đổi test lần 9
+=======
+>>>>>>> main
