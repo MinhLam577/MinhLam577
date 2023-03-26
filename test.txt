@@ -1,4 +1,8 @@
 tesst
 thay đổi tess lần 3
 thay đổi trên nhánh Dev
+<<<<<<< HEAD
 thay đổi test lần 4
+=======
+thya đổi trên nhánh dev lần 2
+>>>>>>> main
