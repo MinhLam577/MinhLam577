@@ -1,4 +1,7 @@
 thay đổi test lần 1
 thay đổi test lần 2
 thay đổi test lần 3
+<<<<<<< HEAD
 thay đổi test lần 4
+=======
+>>>>>>> main
