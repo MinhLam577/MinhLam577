@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLSVModelStoreContainer" CdmEntityContainer="QLSVEntities">
+    <EntitySetMapping Name="LopSHes">
+      <EntityTypeMapping TypeName="QLSVModel.LopSH">
+        <MappingFragment StoreEntitySet="LopSH">
+          <ScalarProperty Name="CLID" ColumnName="CLID" />
+          <ScalarProperty Name="CLName" ColumnName="CLName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SVs">
+      <EntityTypeMapping TypeName="QLSVModel.SV">
+        <MappingFragment StoreEntitySet="SV">
+          <ScalarProperty Name="SVID" ColumnName="SVID" />
+          <ScalarProperty Name="SVCLID" ColumnName="SVCLID" />
+          <ScalarProperty Name="SVName" ColumnName="SVName" />
+          <ScalarProperty Name="SVDtb" ColumnName="SVDtb" />
+          <ScalarProperty Name="SVNS" ColumnName="SVNS" />
+          <ScalarProperty Name="SVGender" ColumnName="SVGender" />
+          <ScalarProperty Name="SVPicture" ColumnName="SVPicture" />
+          <ScalarProperty Name="SVHb" ColumnName="SVHb" />
+          <ScalarProperty Name="SVCccd" ColumnName="SVCccd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

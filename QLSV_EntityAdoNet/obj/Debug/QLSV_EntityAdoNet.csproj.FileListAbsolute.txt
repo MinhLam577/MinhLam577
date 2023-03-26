@@ -1,0 +1,17 @@
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\QLSV_EntityAdoNet.exe.config
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\QLSV_EntityAdoNet.exe
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\QLSV_EntityAdoNet.pdb
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\EntityFramework.dll
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\EntityFramework.SqlServer.dll
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\EntityFramework.xml
+E:\c_sharf_on_school\QLSV_EntityAdoNet\bin\Debug\EntityFramework.SqlServer.xml
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.csproj.AssemblyReference.cache
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.csproj.SuggestedBindingRedirects.cache
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.Properties.Resources.resources
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.csproj.GenerateResource.cache
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.csproj.CoreCompileInputs.cache
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.csproj.CopyComplete
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.exe
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.pdb
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.GUI.AddOrEditForm.resources
+E:\c_sharf_on_school\QLSV_EntityAdoNet\obj\Debug\QLSV_EntityAdoNet.GUI.MainForm.resources

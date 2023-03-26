@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLSVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="LopSH">
+    <Key>
+      <PropertyRef Name="CLID" />
+    </Key>
+    <Property Name="CLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SV">
+    <Key>
+      <PropertyRef Name="SVID" />
+    </Key>
+    <Property Name="SVID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SVCLID" Type="int" />
+    <Property Name="SVName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SVDtb" Type="float" />
+    <Property Name="SVNS" Type="date" />
+    <Property Name="SVGender" Type="bit" />
+    <Property Name="SVPicture" Type="bit" />
+    <Property Name="SVHb" Type="bit" />
+    <Property Name="SVCccd" Type="bit" />
+  </EntityType>
+  <Association Name="FK_SV_LopSH">
+    <End Role="LopSH" Type="Self.LopSH" Multiplicity="0..1" />
+    <End Role="SV" Type="Self.SV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LopSH">
+        <PropertyRef Name="CLID" />
+      </Principal>
+      <Dependent Role="SV">
+        <PropertyRef Name="SVCLID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLSVModelStoreContainer">
+    <EntitySet Name="LopSH" EntityType="Self.LopSH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SV" EntityType="Self.SV" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_SV_LopSH" Association="Self.FK_SV_LopSH">
+      <End Role="LopSH" EntitySet="LopSH" />
+      <End Role="SV" EntitySet="SV" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
